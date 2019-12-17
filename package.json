@@ -17,6 +17,12 @@
     "> 1%",
     "not dead"
   ],
+  "size-limit": [
+    {
+      "path": "dist/browser/index.js",
+      "limit": "5 KB"
+    }
+  ],
   "targets": {
     "main": {
       "engines": {
@@ -43,7 +49,7 @@
     "build": "parcel build lib/index.js --target main --target module",
     "lint": "eslint **/*.js",
     "test": "jest **/*.test.js",
-    "postbuild": "parcel build lib/browser.js --target browser",
+    "postbuild": "parcel build lib/browser.js --target browser && size-limit",
     "start": "parcel serve index.html"
   },
   "license": "MIT",
@@ -57,10 +63,14 @@
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-angular": "^8.2.0",
+    "@size-limit/preset-small-lib": "^2.2.3",
     "eslint": "^6.7.2",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.19.1",
     "jest": "^24.9.0",
     "parcel": "^2.0.0-alpha.3.2"
+  },
+  "dependencies": {
+    "debug": "^4.1.1"
   }
 }
