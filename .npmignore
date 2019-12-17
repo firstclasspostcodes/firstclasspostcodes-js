@@ -1,0 +1,8 @@
+.dependabot
+.github
+lib
+index.html
+commitlint.config.js
+.huskyrc.json
+.gitignore
+.eslint*
