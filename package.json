@@ -20,7 +20,7 @@
   "size-limit": [
     {
       "path": "dist/browser/index.js",
-      "limit": "5 KB"
+      "limit": "10 KB"
     }
   ],
   "targets": {
@@ -36,6 +36,7 @@
       }
     },
     "browser": {
+      "includeNodeModules": true,
       "engines": {
         "browsers": [
           "> 1%",
@@ -47,8 +48,9 @@
   "scripts": {
     "commit": "npx git-cz",
     "build": "parcel build lib/index.js --target main --target module",
-    "lint": "eslint **/*.js",
-    "test": "jest **/*.test.js",
+    "lint": "eslint '**/*.js'",
+    "test": "jest **/*.test.js --coverage",
+    "cypress": "cypress run --headless",
     "postbuild": "parcel build lib/browser.js --target browser && size-limit",
     "start": "parcel serve index.html"
   },
@@ -64,13 +66,20 @@
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-angular": "^8.2.0",
     "@size-limit/preset-small-lib": "^2.2.3",
+    "cypress": "^3.8.0",
     "eslint": "^6.7.2",
     "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-cypress": "^2.8.1",
     "eslint-plugin-import": "^2.19.1",
+    "git-cz": "^3.3.0",
     "jest": "^24.9.0",
     "parcel": "^2.0.0-alpha.3.2"
   },
+  "optionalDependencies": {
+    "node-fetch": "^2.6.0"
+  },
   "dependencies": {
-    "debug": "^4.1.1"
+    "debug": "^4.1.1",    
+    "qs": "^6.9.1"
   }
 }
