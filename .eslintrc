@@ -1,11 +1,22 @@
 {
-  "extends": "airbnb-base",
+  "extends": [
+    "airbnb-base",
+    "plugin:cypress/recommended"
+  ],
   "env": {
     "node": true,
     "browser": true,
     "jest": true
   },
   "rules": {
-    "no-console": "warn"
+    "no-console": "warn",
+    "object-curly-newline": [
+      "error",
+      {
+        "ObjectPattern": {
+          "minProperties": 6
+        }
+      }
+    ]
   }
 }

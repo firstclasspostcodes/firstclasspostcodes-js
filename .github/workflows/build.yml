@@ -13,7 +13,12 @@ jobs:
         with:
           node-version: 12
       - run: npm ci
-      - run: npm test
+      - run: npm run lint
+      - run: npm run test
+      - uses: cypress-io/github-action@v1
+        with:
+          browser: chrome
+          start: npm start
       - name: Semantic Release
         uses: cycjimmy/semantic-release-action@v2
         with:

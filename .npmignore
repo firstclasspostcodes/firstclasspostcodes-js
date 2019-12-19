@@ -1,8 +1,13 @@
+# development folders
 .dependabot
 .github
 lib
+
+# development files
 index.html
 commitlint.config.js
+cypress.json
+cypress.env.json
 .huskyrc.json
 .gitignore
 .eslint*
