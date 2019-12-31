@@ -14,7 +14,7 @@
       "error",
       {
         "ObjectPattern": {
-          "minProperties": 6
+          "minProperties": 8
         }
       }
     ]
