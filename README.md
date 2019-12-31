@@ -1,7 +1,9 @@
 ![Cover](/.github/images/cover.png)
 
 # Firstclasspostcodes
-The Firstclasspostcodes Javascript is compatible with both Node.JS and Browsers. An identical API is provided for both the client and server side.
+The Firstclasspostcodes Javascript library is compatible with both Node.JS and Browsers. 
+
+An identical API is provided for both the client and server side.
 
 ## Documentation
 See [@firstclasspostcodes/js API docs](https://docs.firstclasspostcodes.com/js/getting-started) for detailed usage and examples.
@@ -113,7 +115,7 @@ $ npm run lint
 $ npm test
 ```
 
-We use [Cypress]() to ensure that our library is working correctly within the browser, this can be executed locally using:
+We use [Cypress](https://www.cypress.io/) to ensure that our library is working correctly inside the browser, this can be executed locally using:
 
 ```
 $ npm run cypress

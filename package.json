@@ -15,6 +15,7 @@
   "browser": "dist/browser/index.js",
   "browserslist": [
     "> 1%",
+    "IE 11",
     "not dead"
   ],
   "size-limit": [
@@ -40,6 +41,7 @@
       "engines": {
         "browsers": [
           "> 1%",
+          "IE 11",
           "not dead"
         ]
       }
@@ -49,7 +51,7 @@
     "commit": "npx git-cz",
     "build": "parcel build lib/index.js --target main --target module",
     "lint": "eslint '**/*.js'",
-    "test": "jest **/*.test.js --coverage",
+    "test": "jest --coverage",
     "cypress": "cypress run --headless",
     "postbuild": "parcel build lib/browser.js --target browser && size-limit",
     "start": "parcel serve index.html"
