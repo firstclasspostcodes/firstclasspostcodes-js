@@ -15,14 +15,30 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm run test
+      - run: npm run build
       - uses: cypress-io/github-action@v1
         with:
           browser: chrome
           start: npm start
       - name: Semantic Release
+        id: semantic
         uses: cycjimmy/semantic-release-action@v2
         with:
           branch: master
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+      - name: Upload Release
+        if: steps.semantic.outputs.new_release_published == 'true'
+        with:
+          branch: master
+        run:
+          - rename -n "s/index/$SEMANTIC_VERSION/" dist/browser/index.*
+          - aws s3 cp dist/browser/ $AWS_S3_PATH --recursive
+        env:
+          SEMANTIC_VERSION: ${{steps.semantic.outputs.new_release_version}}
+          AWS_REGION: ${{secrets.AWS_REGION}}
+          AWS_ACCESS_KEY_ID: ${{secrets.AWS_ACCESS_KEY_ID}}
+          AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
+          AWS_S3_PATH: ${{secrets.AWS_S3_PATH}}
+          
