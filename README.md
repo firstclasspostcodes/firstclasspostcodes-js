@@ -18,7 +18,7 @@ npm install @firstclasspostcodes/js
 or directly in HTML with:
 
 ```html
-<script src="https://firstclasspostcodes.com/js/latest.js"></script>
+<script src="https://js.firstclasspostcodes.com/v1.3.0.js"></script>
 ```
 
 ## Usage
