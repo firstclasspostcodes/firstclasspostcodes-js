@@ -31,7 +31,7 @@ jobs:
       - name: Upload Release
         if: steps.semantic.outputs.new_release_published == 'true'
         run: |
-          apt-get install -y rename
+          sudo apt-get install -y rename
           rename -n "s/index/$SEMANTIC_VERSION/" dist/browser/index.*
           aws s3 cp dist/browser/ $AWS_S3_PATH --recursive
         env:
