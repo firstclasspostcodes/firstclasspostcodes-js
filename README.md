@@ -18,7 +18,26 @@ npm install @firstclasspostcodes/js
 or directly in HTML with:
 
 ```html
-<script src="https://js.firstclasspostcodes.com/v1.3.0.js"></script>
+<script src="https://js.firstclasspostcodes.com/VERSION.js"></script>
+```
+
+Where `VERSION` is the desired version of the library, for example `v1.4.1`. 
+
+### Security
+Where the libary is loaded on pages including sensitive information, we recommend using the [Subresource Integrity](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity) security feature. 
+
+Every version of the library is accompanied by an SRI hash file, the hash can be accessed directly using:
+
+```sh
+$ curl https://js.firstclasspostcodes.com/VERSION.sri.txt # => "sha256-45tfd... sha384-43567ytr..."
+```
+
+You can then update the above `<script>` tag, adding the integrity attribute:
+
+```html
+<script src="https://js.firstclasspostcodes.com/VERSION.js"
+        integrity="sha256-45tfd... sha384-43567ytr..."
+        crossorigin="anonymous"></script>
 ```
 
 ## Usage
