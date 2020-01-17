@@ -65,7 +65,7 @@
     "url": "https://github.com/firstclasspostcodes/firstclasspostcodes-js/issues"
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.3.4",
+    "@commitlint/cli": "^8.3.5",
     "@commitlint/config-angular": "^8.3.4",
     "@size-limit/preset-small-lib": "^3.0.0",
     "cypress": "^3.8.1",
