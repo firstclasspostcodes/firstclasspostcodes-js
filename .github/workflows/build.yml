@@ -7,6 +7,17 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    services:
+      mock-api:
+        image: firstclasspostcodes/mock:latest
+        ports:
+          - '80:3000'
+
+    env:
+      MOCK_API_URL: http://localhost:3000
+      MOCK_API_KEY: '111111111111'
+
     steps:
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1

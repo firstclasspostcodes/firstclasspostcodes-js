@@ -125,6 +125,27 @@ localStorage.debug = 'firstclasspostcodes';
 const client = Firstclasspostcodes('....');
 ```
 
+## Integration / Testing
+We provide a mock service of our API as a docker container [available here](https://github.com/firstclasspostcodes/firstclasspostcodes-mock). Once the container is running, the library can be easily configured to use it:
+
+```js
+const Firstclasspostcodes = require('@firstclasspostcodes/js')
+const url = require('url');
+
+const MOCK_API_URL = 'http://localhost:3000';
+
+// The mock API key is always 111111111111 ("12x1")
+const MOCK_API_KEY = '111111111111'
+
+const uri = url.parse(MOCK_API_URL);
+
+const client = Firstclasspostcodes(MOCK_API_KEY, {
+  host: uri.host,
+  protocol: uri.protocol,
+  basePath: uri.path,
+});
+```
+
 ## Development
 Run all linting and tests:
 
