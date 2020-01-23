@@ -11,12 +11,14 @@ jobs:
     services:
       mock-api:
         image: firstclasspostcodes/mock:latest
+        env:
+          PORT: 3000
         ports:
-          - '80:3000'
+          - '3000:3000'
 
     env:
-      MOCK_API_URL: http://localhost:3000
-      MOCK_API_KEY: '111111111111'
+      API_URL: http://localhost:3000
+      API_KEY: '111111111111'
 
     steps:
       - uses: actions/checkout@v1
