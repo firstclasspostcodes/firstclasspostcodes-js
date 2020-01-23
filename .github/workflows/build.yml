@@ -19,6 +19,8 @@ jobs:
     env:
       API_URL: http://localhost:3000
       API_KEY: '111111111111'
+      CYPRESS_API_URL: http://localhost:3000
+      CYPRESS_API_KEY: '111111111111'
 
     steps:
       - uses: actions/checkout@v1
