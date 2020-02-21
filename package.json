@@ -75,7 +75,7 @@
     "eslint-plugin-import": "^2.20.1",
     "git-cz": "^4.3.1",
     "jest": "^25.1.0",
-    "parcel": "^2.0.0-nightly.105"
+    "parcel": "^2.0.0-nightly.118"
   },
   "optionalDependencies": {
     "node-fetch": "^2.6.0"
