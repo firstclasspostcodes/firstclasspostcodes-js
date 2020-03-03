@@ -64,19 +64,15 @@ The library can be initialized with several options:
 
 ```js
 const client = Firstclasspostcodes('fg3r...', {
-  host: 'api.firstclasspostcodes.com',
+  endpoint: 'https://api.firstclasspostcodes.com/data',
   content: 'json',
-  protocol: 'https',
-  basePath: '/data',
 });
 ```
 
 | Property | Default | Description |
 |:-----|:-----|:-----|
-| `host` | `'api.firstclasspostcodes.com'` | The host to be used. This can be overridden to use a private endpoint, or for testing purposes. |
+| `endpoint` | `https://api.firstclasspostcodes.com/data` | The endpoint to be used. This can be overridden to use a private endpoint, or for testing purposes. |
 | `content` | `'json'` | The content key controls the type of response being received. `geo+json` can be used to receives responses in [GeoJSON](https://geojson.org/).
-| `protocol` | `'https'` | The HTTP protocol to be used. This can be overridden for private endpoints or for testing purposes. |
-| `basePath` | `'/data'` | The path to be prefixed to all API requests. This can be overridden for private endpoints or for testing purposes. |
 
 ## Events
 Event handlers can be attached to the library using the Node.JS [EventEmitter](https://nodejs.org/api/events.html#events_class_eventemitter) pattern. 
@@ -130,19 +126,14 @@ We provide a mock service of our API as a docker container [available here](http
 
 ```js
 const Firstclasspostcodes = require('@firstclasspostcodes/js')
-const url = require('url');
 
 const MOCK_API_URL = 'http://localhost:3000';
 
 // The mock API key is always 111111111111 ("12x1")
 const MOCK_API_KEY = '111111111111'
 
-const uri = url.parse(MOCK_API_URL);
-
 const client = Firstclasspostcodes(MOCK_API_KEY, {
-  host: uri.host,
-  protocol: uri.protocol,
-  basePath: uri.path,
+  endpoint: MOCK_API_URL,
 });
 ```
 
