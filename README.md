@@ -23,6 +23,12 @@ or directly in HTML with:
 
 Where `VERSION` is the desired version of the library, for example `v1.4.1`. 
 
+**Note on older browsers:** We recommend using a polyfill service, the following example covers all of the required language features:
+
+```html
+<script src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2Cfetch%2CObject.assign"></script>
+```
+
 ### Security
 Where the libary is loaded on pages including sensitive information, we recommend using the [Subresource Integrity](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity) security feature. 
 
