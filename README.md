@@ -111,20 +111,14 @@ client.off('request', handler);
 **Note:** `{name}` is replaced with the operation name of the method, as defined inside the OpenAPI specification.
 
 ## Debug
-Once the library has been initialized, various debug statements are logged as requests are sent and responses received. We use the [debug](https://www.npmjs.com/package/debug) library to facilitate this both in Node.JS and on the browser.
+Once the library has been initialized, various debug statements are logged as requests are sent and responses received.
 
-Enable debug within Node.JS:
-
-```sh
-$ DEBUG=firstclasspostcodes node some-script.js
-```
-
-or on the browser with:
+Enabling debug mode:
 
 ```js
-localStorage.debug = 'firstclasspostcodes';
-
 const client = Firstclasspostcodes('....');
+
+client.debugging = true;
 ```
 
 ## Integration / Testing
