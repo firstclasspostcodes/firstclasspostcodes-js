@@ -14,14 +14,14 @@
   "module": "dist/module/index.js",
   "browser": "dist/browser/index.js",
   "browserslist": [
-    "> 1%",
+    "> 0.25%",
     "IE 11",
     "not dead"
   ],
   "size-limit": [
     {
       "path": "dist/browser/index.js",
-      "limit": "10 KB"
+      "limit": "12 KB"
     }
   ],
   "targets": {
@@ -40,7 +40,7 @@
       "includeNodeModules": true,
       "engines": {
         "browsers": [
-          "> 1%",
+          "> 0.25%",
           "IE 11",
           "not dead"
         ]
@@ -65,6 +65,16 @@
     "url": "https://github.com/firstclasspostcodes/firstclasspostcodes-js/issues"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-object-rest-spread": "^7.9.0",
+    "@babel/plugin-transform-arrow-functions": "^7.8.3",
+    "@babel/plugin-transform-classes": "^7.9.2",
+    "@babel/plugin-transform-destructuring": "^7.8.8",
+    "@babel/plugin-transform-parameters": "^7.9.3",
+    "@babel/plugin-transform-runtime": "^7.9.0",
+    "@babel/plugin-transform-shorthand-properties": "^7.8.3",
+    "@babel/plugin-transform-spread": "^7.8.3",
+    "@babel/plugin-transform-template-literals": "^7.8.3",
+    "@babel/preset-env": "^7.9.0",
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-angular": "^8.3.4",
     "@size-limit/preset-small-lib": "^3.0.1",
@@ -75,13 +85,15 @@
     "eslint-plugin-import": "^2.20.1",
     "git-cz": "^4.3.1",
     "jest": "^25.2.3",
-    "parcel": "^2.0.0-nightly.180"
+    "parcel": "^2.0.0-alpha.3.2"
   },
   "optionalDependencies": {
     "node-fetch": "^2.6.0"
   },
   "dependencies": {
-    "debug": "^4.1.1",    
+    "@babel/runtime": "^7.9.2",
+    "core-js": "^3.6.4",
+    "debug": "^4.1.1",
     "qs": "^6.9.1"
   }
 }
