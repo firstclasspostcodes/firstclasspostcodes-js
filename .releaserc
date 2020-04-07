@@ -1,0 +1,36 @@
+{
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    [
+      "@google/semantic-release-replace-plugin",
+      {
+        "replacements": [
+          {
+            "files": ["README.md"],
+            "from": "com/v[\\.0-9]+",
+            "to": "com/${nextRelease.gitTag}.",
+            "results": [
+              {
+                "file": "README.md",
+                "hasChanged": true,
+                "numMatches": 3,
+                "numReplacements": 3
+              }
+            ],
+            "countMatches": true
+          }
+        ]
+      }
+    ],
+    [
+      "@semantic-release/git",
+      {
+        "assets": ["README.md"],
+        "message": "chore: Updated README.md version ${nextRelease.version} [skip ci]"
+      }
+    ],
+    "@semantic-release/npm",
+    "@semantic-release/github"
+  ]
+}

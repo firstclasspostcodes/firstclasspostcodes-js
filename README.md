@@ -1,7 +1,13 @@
 ![Cover](/.github/images/cover.png)
 
+[//]: # "NOTE: The URL for the JS library is automatically updated by semantic-release."
+
 # Firstclasspostcodes
+![Build, test and release](https://github.com/firstclasspostcodes/firstclasspostcodes-js/workflows/Build,%20test%20and%20release/badge.svg)
+
 The Firstclasspostcodes Javascript library is compatible with both Node.JS and Browsers. 
+
+The library will work in all modern browsers and IE9+.
 
 An identical API is provided for both the client and server side.
 
@@ -18,10 +24,8 @@ npm install @firstclasspostcodes/js
 or directly in HTML with:
 
 ```html
-<script src="https://js.firstclasspostcodes.com/VERSION.js"></script>
+<script src="https://js.firstclasspostcodes.com/v0.0.0.js"></script>
 ```
-
-Where `VERSION` is the desired version of the library, for example `v1.4.1`. 
 
 **Note on older browsers:** We recommend using a polyfill service, the following example covers all of the required language features:
 
@@ -35,13 +39,13 @@ Where the libary is loaded on pages including sensitive information, we recommen
 Every version of the library is accompanied by an SRI hash file, the hash can be accessed directly using:
 
 ```sh
-$ curl https://js.firstclasspostcodes.com/VERSION.sri.txt # => "sha256-45tfd... sha384-43567ytr..."
+$ curl https://js.firstclasspostcodes.com/v0.0.0.sri.txt # => "sha256-45tfd... sha384-43567ytr..."
 ```
 
 You can then update the above `<script>` tag, adding the integrity attribute:
 
 ```html
-<script src="https://js.firstclasspostcodes.com/VERSION.js"
+<script src="https://js.firstclasspostcodes.com/v0.0.0.js"
         integrity="sha256-45tfd... sha384-43567ytr..."
         crossorigin="anonymous"></script>
 ```

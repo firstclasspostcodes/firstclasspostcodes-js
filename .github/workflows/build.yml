@@ -52,7 +52,7 @@ jobs:
           H512=sha512-`openssl dgst -sha512 -binary dist/browser/index.js | openssl base64 -A`
           echo "$H256 $H384 $H512" > dist/browser/index.sri.txt
           rename "s/index/v$SEMANTIC_VERSION/" dist/browser/index.*
-          aws s3 cp dist/browser/ $AWS_S3_PATH --recursive
+          aws s3 cp dist/browser/ $AWS_S3_PATH --recursive --cache-control "max-age=31536000"
         env:
           SEMANTIC_VERSION: ${{steps.semantic.outputs.new_release_version}}
           AWS_REGION: ${{secrets.AWS_REGION}}
