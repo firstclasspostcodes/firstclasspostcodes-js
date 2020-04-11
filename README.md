@@ -1,5 +1,3 @@
-![Cover](/.github/images/cover.png)
-
 [//]: # "NOTE: The URL for the JS library is automatically updated by semantic-release."
 
 # Firstclasspostcodes
