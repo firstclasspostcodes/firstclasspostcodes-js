@@ -89,13 +89,12 @@
     "jest": "^25.3.0",
     "parcel": "^2.0.0-nightly.208"
   },
-  "optionalDependencies": {
-    "node-fetch": "^2.6.0"
-  },
+  "optionalDependencies": {},
   "dependencies": {
     "@babel/runtime": "^7.9.2",
     "core-js": "^3.6.5",
     "debug": "^4.1.1",
+    "isomorphic-unfetch": "^3.0.0",
     "qs": "^6.9.3"
   }
 }
