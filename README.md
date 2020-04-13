@@ -22,7 +22,7 @@ npm install @firstclasspostcodes/js
 or directly in HTML with:
 
 ```html
-<script src="https://js.firstclasspostcodes.com/v1.6.1.js"></script>
+<script src="https://js.firstclasspostcodes.com/v1.6.2.js"></script>
 ```
 
 **Note on older browsers:** We recommend using a polyfill service, the following example covers all of the required language features:
@@ -37,13 +37,13 @@ Where the libary is loaded on pages including sensitive information, we recommen
 Every version of the library is accompanied by an SRI hash file, the hash can be accessed directly using:
 
 ```sh
-$ curl https://js.firstclasspostcodes.com/v1.6.1.sri.txt # => "sha256-45tfd... sha384-43567ytr..."
+$ curl https://js.firstclasspostcodes.com/v1.6.2.sri.txt # => "sha256-45tfd... sha384-43567ytr..."
 ```
 
 You can then update the above `<script>` tag, adding the integrity attribute:
 
 ```html
-<script src="https://js.firstclasspostcodes.com/v1.6.1.js"
+<script src="https://js.firstclasspostcodes.com/v1.6.2.js"
         integrity="sha256-45tfd... sha384-43567ytr..."
         crossorigin="anonymous"></script>
 ```
