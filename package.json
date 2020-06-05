@@ -85,7 +85,7 @@
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-cypress": "^2.10.3",
     "eslint-plugin-import": "^2.20.2",
-    "git-cz": "^4.5.0",
+    "git-cz": "^4.6.2",
     "jest": "^26.0.1",
     "parcel": "^2.0.0-nightly.280"
   },
