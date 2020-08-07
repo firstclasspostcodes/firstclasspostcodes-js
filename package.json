@@ -87,7 +87,7 @@
     "eslint-plugin-import": "^2.22.0",
     "git-cz": "^4.7.0",
     "jest": "^26.2.1",
-    "parcel": "^2.0.0-nightly.354"
+    "parcel": "^2.0.0-nightly.360"
   },
   "optionalDependencies": {},
   "dependencies": {
