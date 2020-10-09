@@ -86,7 +86,7 @@
     "eslint-plugin-cypress": "^2.11.2",
     "eslint-plugin-import": "^2.22.0",
     "git-cz": "^4.7.1",
-    "jest": "^26.4.2",
+    "jest": "^26.5.2",
     "parcel": "^2.0.0-nightly.408"
   },
   "optionalDependencies": {},
