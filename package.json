@@ -66,7 +66,7 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-object-rest-spread": "^7.12.1",
-    "@babel/plugin-transform-arrow-functions": "^7.10.4",
+    "@babel/plugin-transform-arrow-functions": "^7.12.1",
     "@babel/plugin-transform-classes": "^7.12.1",
     "@babel/plugin-transform-destructuring": "^7.10.4",
     "@babel/plugin-transform-parameters": "^7.10.5",
