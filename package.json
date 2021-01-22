@@ -92,7 +92,7 @@
   "optionalDependencies": {},
   "dependencies": {
     "@babel/runtime": "^7.9.6",
-    "core-js": "^3.6.5",
+    "core-js": "^3.8.3",
     "debug": "^4.1.1",
     "isomorphic-unfetch": "^3.0.0",
     "qs": "^6.9.4"
